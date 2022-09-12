@@ -3,3 +3,10 @@ body
 {
 background-image:url("https://vip-go.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/shutterstock_407554567.jpg?w=750")
 }
+@media only screen and (max-width: 768px) {
+   .row{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+   }
+}
