@@ -20,6 +20,7 @@ def market_page():
         p_item_object = Item.query.filter_by(name=purchased_item).first()
         if p_item_object:
             if current_user.can_purchase(p_item_object):
+                 p_item_object.buy(current_user)
                 flash(f"Congratulations You have purchased {p_item_object.name} for Rs. {p_item_object.price}", category="success")
             else:
                 flash(f"Sorry! You don't have enough amount to buy {p_item_object.name}", category="danger")
